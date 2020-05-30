@@ -71,6 +71,12 @@
         width: 100vw;
         height: calc(100% - var(--basic-fixed-val) * 2);
         overflow-y: scroll;
+        /** hidden scroll bar */
+        scrollbar-width: none;
+    }
+    /** hidden scroll bar */
+    .document-skelton::-webkit-scrollbar {
+        display:none;
     }
     .document {
         padding: calc(var(--basic-fixed-val)* 1.5) calc(var(--basic-fixed-val) * 3);
