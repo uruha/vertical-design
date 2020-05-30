@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
     :root {
-        --fixed-height: 24px;
+        --fixed-height: 26px;
     }
     html, body { height: 100%; }
     body {
@@ -21,6 +21,7 @@
             Meiryo,
             sans-serif;
         font-size: 100%;
+        font-feature-settings: 'pkna';
     }
     .basic-skelton {
         height: 100vh;
@@ -53,15 +54,17 @@
         writing-mode: vertical-rl;
         line-height: 1.9;
         letter-spacing: 0.03em;
+        line-height: 1.9;
         width: 100vw;
         height: calc(100% - var(--fixed-height) * 2);
         overflow-y: scroll;
     }
     .document {
-        padding: calc(var(--fixed-height)* 2) calc(var(--fixed-height) * 3);
+        padding: calc(var(--fixed-height)* 1.5) calc(var(--fixed-height) * 3);
     }
     .document p {
         text-indent: 1rem;
+        font-size: 1.25rem;
     }
     .footer {
         text-align: center;
