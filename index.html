@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <style>
     :root {
-        --fixed-height: 26px;
+        --basic-fixed-val: 24px;
     }
     html, body { height: 100%; }
     body {
@@ -27,7 +27,7 @@
         height: 100vh;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: var(--fixed-height) auto var(--fixed-height);
+        grid-template-rows: var(--basic-fixed-val) auto var(--basic-fixed-val);
         grid-template-areas:
             "header "
             "main   "
@@ -35,12 +35,14 @@
     }
     .header-skelton {
         grid-area: header;
+        max-height: var(--basic-fixed-val);
     }
     .main-skelton {
         grid-area: main;
     }
     .footer-skelton {
         grid-area: footer;
+        max-height: var(--basic-fixed-val);
     }
     .header {
         display: flex;
@@ -56,14 +58,17 @@
         letter-spacing: 0.03em;
         line-height: 1.9;
         width: 100vw;
-        height: calc(100% - var(--fixed-height) * 2);
+        height: calc(100% - var(--basic-fixed-val) * 2);
         overflow-y: scroll;
     }
     .document {
-        padding: calc(var(--fixed-height)* 1.5) calc(var(--fixed-height) * 3);
+        padding: calc(var(--basic-fixed-val)* 1.5) calc(var(--basic-fixed-val) * 3);
     }
     .document p {
         text-indent: 1rem;
+        font-size: 1.25rem;
+    }
+    .document li {
         font-size: 1.25rem;
     }
     .footer {
@@ -93,7 +98,17 @@
                         <h1>たいとる</h1>
                         <h2>たいとるほそく</h2>
                         <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）</p>
+                        <ul>
+                            <li>候補1</li>
+                            <li>候補2</li>
+                            <li>候補3</li>
+                        </ul>
                         <p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+                        <ol>
+                            <li>候補1</li>
+                            <li>候補2</li>
+                            <li>候補3</li>
+                        </ol>
                     </div>
                 </div>
             </main>
