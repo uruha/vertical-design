@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きれいなたてよみ</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+    :root {
+        --fixed-height: 24px;
+    }
+    html, body { height: 100%; }
+    body {
+        font-family:
+            "Noto Serif JP",
+            "Helvetica Neue",
+            Arial,
+            "Hiragino Kaku Gothic ProN",
+            "Hiragino Sans",
+            Meiryo,
+            sans-serif;
+        font-size: 100%;
+    }
+    .basic-skelton {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: var(--fixed-height) auto var(--fixed-height);
+        grid-template-areas:
+            "header "
+            "main   "
+            "footer ";
+    }
+    .header-skelton {
+        grid-area: header;
+    }
+    .main-skelton {
+        grid-area: main;
+    }
+    .footer-skelton {
+        grid-area: footer;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .title {
+        font-size: 0.85rem;
+    }
+    .document-skelton {
+        writing-mode: vertical-rl;
+        line-height: 1.9;
+        letter-spacing: 0.03em;
+        width: 100vw;
+        height: calc(100% - var(--fixed-height) * 2);
+    }
+    .document {
+        padding: calc(var(--fixed-height)* 2) calc(var(--fixed-height) * 3);
+    }
+    /* .document h1,
+    .document h2,
+    .document h3,
+    .document h4,
+    .document h5,
+    .document h6 {
+        margin: 0;
+    } */
+    .document p {
+        text-indent: 1rem;
+    }
+    .footer {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="basic-skelton">
+        <div class="header-skelton">
+            <header>
+                <div class="header">
+                    <div class="logo">ろご</div>
+                    <h1 class="title">ぺーじたいとる</h1>
+                    <nav>
+                        <div class="navigation">
+                            なび
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="main-skelton">
+            <main>
+                <div class="document-skelton">
+                    <div class="document">
+                        <h1>たいとる</h1>
+                        <h2>たいとるほそく</h2>
+                        <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）</p>
+                        <p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="footer-skelton">
+            <footer>
+                <div class="footer">
+                    &copy;こぴーらいととか
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
