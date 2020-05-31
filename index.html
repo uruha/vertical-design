@@ -6,100 +6,7 @@
     <title>きれいなたてよみ</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <style>
-    :root {
-        --basic-fixed-val: 24px;
-    }
-    html, body { height: 100%; }
-    body {
-        font-family:
-            "Noto Serif JP",
-            "Helvetica Neue",
-            Arial,
-            "Hiragino Kaku Gothic ProN",
-            "Hiragino Sans",
-            Meiryo,
-            sans-serif;
-        font-size: 100%;
-        font-feature-settings: 'pkna';
-        background-color: #f8f4e6;
-    }
-    .basic-skelton {
-        height: 100vh;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: var(--basic-fixed-val) auto var(--basic-fixed-val);
-        grid-template-areas:
-            "header "
-            "main   "
-            "footer ";
-        background-color: #f8f4e6;
-    }
-    .header-skelton {
-        grid-area: header;
-        max-height: var(--basic-fixed-val);
-    }
-    .main-skelton {
-        grid-area: main;
-    }
-    .footer-skelton {
-        grid-area: footer;
-        max-height: var(--basic-fixed-val);
-    }
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .logo {
-        padding: 0 0 0 1vw;
-    }
-    .logo img {
-        width: 20px;
-        height: 20px;
-    }
-    .title {
-        font-size: 0.85rem;
-    }
-    .navigation {
-        padding: 0 1vw 0 0;
-    }
-    .navigation span {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-color: #2b2b2b;
-    }
-    .document-skelton {
-        /** writting set */
-        writing-mode: vertical-rl;
-        line-height: 1.9;
-        letter-spacing: 0.03em;
-        /** container set */
-        width: 100vw;
-        height: calc(100% - var(--basic-fixed-val) * 2);
-        overflow-y: scroll;
-        /** hidden scroll bar */
-        scrollbar-width: none;
-    }
-    /** hidden scroll bar */
-    .document-skelton::-webkit-scrollbar {
-        display:none;
-    }
-    .document {
-        padding: calc(var(--basic-fixed-val)* 1.5) calc(var(--basic-fixed-val) * 3);
-    }
-    .document p {
-        text-indent: 1rem;
-        font-size: 1.25rem;
-    }
-    .document li {
-        font-size: 1.25rem;
-    }
-    .footer {
-        text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="basic-skelton">
@@ -109,13 +16,9 @@
                     <div class="logo">
                         <img src="logo.svg" alt="logo">
                     </div>
-                    <h1 class="title">ぺーじたいとる</h1>
-                    <nav>
-                        <div class="navigation">
-                            <span></span>
-                        </div>
-                        <div class="drawer"></div>
-                    </nav>
+                    <p class="title">
+                        思考 / <span>ぺーじたいとる</span>
+                    </p>
                 </div>
             </header>
         </div>
@@ -123,20 +26,27 @@
             <main>
                 <div class="document-skelton">
                     <div class="document">
-                        <h1>たいとる</h1>
-                        <h2>たいとるほそく</h2>
-                        <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）</p>
-                        <ul>
-                            <li>候補1</li>
-                            <li>候補2</li>
-                            <li>候補3</li>
-                        </ul>
-                        <p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
-                        <ol>
-                            <li>候補1</li>
-                            <li>候補2</li>
-                            <li>候補3</li>
-                        </ol>
+                        <article>
+                            <header>
+                                <h1>たいとる</h1>
+                                <h2>たいとるほそく</h2>
+                                <time>2020.06.01</time>
+                            </header>
+                            <section>
+                                <p>つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。（Wikipediaより）</p>
+                                <ul>
+                                    <li>候補1</li>
+                                    <li>候補2</li>
+                                    <li>候補3</li>
+                                </ul>
+                                <p>親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰を抜かす奴があるかと云ったから、この次は抜かさずに飛んで見せますと答えた。（青空文庫より）</p>
+                                <ol>
+                                    <li>候補1</li>
+                                    <li>候補2</li>
+                                    <li>候補3</li>
+                                </ol>
+                            </section>
+                        </article>
                     </div>
                 </div>
             </main>
@@ -144,7 +54,9 @@
         <div class="footer-skelton">
             <footer>
                 <div class="footer">
-                    &copy;こぴーらいととか
+                    <span class="copyright">
+                        &copy;こぴーらいととか
+                    </span>
                 </div>
             </footer>
         </div>
